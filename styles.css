@@ -162,6 +162,27 @@ body {
     position: relative;
     z-index: 1;
     max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-profile {
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+    transition: var(--transition);
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.7);
 }
 
 .hero-title {
@@ -188,15 +209,21 @@ body {
 .hero-description {
     font-size: 1.125rem;
     color: var(--text-muted);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    margin-bottom: 1.5rem;
     line-height: 1.8;
+}
+
+.hero-description strong {
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 /* Buttons */
@@ -273,6 +300,45 @@ section {
     line-height: 1.8;
 }
 
+.about-content p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.highlight-item {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    transition: var(--transition);
+}
+
+.highlight-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.2);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.highlight-item strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
 /* Skills Section */
 .skills {
     background: var(--bg-darker);
@@ -324,6 +390,106 @@ section {
     font-size: 0.875rem;
     font-weight: 500;
     border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* GitHub Stats Section */
+.github-stats {
+    background: var(--bg-darker);
+}
+
+.stats-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stats-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.contribution-graph {
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: var(--bg-card);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.graph-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.stat-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.streak-container {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.streak-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.github-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.info-value {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 /* Projects Section */
