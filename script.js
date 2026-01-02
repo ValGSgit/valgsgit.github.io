@@ -10,8 +10,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
             // Close mobile menu if open
             const navMenu = document.querySelector('.nav-menu');
+            const navToggle = document.querySelector('.nav-toggle');
             if (navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
+                if (navToggle) {
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
             }
         }
     });
@@ -23,7 +27,8 @@ const navMenu = document.querySelector('.nav-menu');
 
 if (navToggle) {
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        const isExpanded = navMenu.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
     });
 }
 
