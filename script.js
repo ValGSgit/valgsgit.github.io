@@ -23,7 +23,8 @@ const navMenu = document.querySelector('.nav-menu');
 
 if (navToggle) {
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        const isExpanded = navMenu.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
     });
 }
 

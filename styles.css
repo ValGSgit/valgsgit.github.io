@@ -160,6 +160,11 @@ body {
     font-size: 1.5rem;
 }
 
+.nav-toggle:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -174,8 +179,10 @@ body {
     position: relative;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: var(--primary-color);
+    outline: none;
 }
 
 .nav-link::after {
@@ -189,7 +196,8 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link:focus::after {
     width: 100%;
 }
 
@@ -428,6 +436,11 @@ body {
     align-items: center;
     gap: 0.5rem;
     border: 2px solid transparent;
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .btn-icon {
@@ -1246,11 +1259,13 @@ section {
     transition: var(--transition);
 }
 
-.contact-btn:hover {
+.contact-btn:hover,
+.contact-btn:focus {
     background: var(--primary-color);
     border-color: var(--primary-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+    outline: none;
 }
 
 .contact-btn.linkedin:hover {
