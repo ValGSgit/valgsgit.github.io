@@ -3,14 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of ValGS - Software Developer | C, Python, TypeScript | 42 School Student">
-    <title>ValGS - Software Developer Portfolio</title>
+    <meta name="description" content="Valentino (ValGS) - Software Developer specializing in C, Python, TypeScript | Final Year 42 School Student | Open to Opportunities in Vienna & Remote">
+    <meta name="keywords" content="Software Developer, C Programming, Python, TypeScript, 42 School, Vienna, Web Developer, Systems Programming, Junior Developer">
+    <meta name="author" content="Valentino - ValGS">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valgsgit.github.io/">
+    <meta property="og:title" content="Valentino (ValGS) - Software Developer | Open to Opportunities">
+    <meta property="og:description" content="Final year 42 School student specializing in C, Python, and TypeScript. Currently completing the last project of 42's Common Core. Open to software development opportunities in Vienna and remote.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ValGSgit/ValGSgit/main/assets/images/profile.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Valentino (ValGS) - Software Developer | Open to Opportunities">
+    <meta name="twitter:description" content="Final year 42 School student specializing in C, Python, and TypeScript. Open to software development opportunities.">
+    
+    <title>Valentino (ValGS) - Software Developer | Open to Opportunities</title>
+    <link rel="canonical" href="https://valgsgit.github.io/">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Valentino",
+        "alternateName": "ValGS",
+        "url": "https://valgsgit.github.io/",
+        "image": "https://raw.githubusercontent.com/ValGSgit/ValGSgit/main/assets/images/profile.jpg",
+        "jobTitle": "Software Developer",
+        "worksFor": {
+            "@type": "EducationalOrganization",
+            "name": "42 School Vienna"
+        },
+        "knowsAbout": ["C Programming", "Python", "TypeScript", "JavaScript", "Web Development", "Systems Programming"],
+        "knowsLanguage": ["English", "Spanish", "German", "Italian"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Vienna",
+            "addressCountry": "Austria"
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Open to Work Banner -->
+    <div class="open-to-work-banner">
+        <span class="pulse-dot"></span>
+        <span>🎯 Open to Opportunities | Final 42 Project in Progress</span>
+        <a href="#contact" class="banner-cta">Let's Talk →</a>
+    </div>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -20,9 +74,11 @@
             </button>
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#current-focus" class="nav-link">Current Focus</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#github-stats" class="nav-link">GitHub</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -32,24 +88,48 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <!-- Availability Badge -->
+                <div class="availability-badge">
+                    <span class="status-indicator"></span>
+                    <span>Available for Hire</span>
+                </div>
+                
                 <div class="hero-profile">
                     <img src="https://raw.githubusercontent.com/ValGSgit/ValGSgit/main/assets/images/profile.jpg" alt="Professional headshot of Valentino, software developer based in Vienna" class="profile-image">
+                    <div class="profile-ring"></div>
                 </div>
                 <h1 class="hero-title">Hi, I'm <span class="highlight">Valentino</span></h1>
                 <h2 class="hero-subtitle">Software Developer & Problem Solver</h2>
+                <p class="hero-tagline">🚀 Completing the Final Project of 42's Common Core</p>
                 <p class="hero-description">
                     🇦🇷 From Argentina • 🇦🇹 Based in Vienna • 🎓 42 School Rank 6
                 </p>
                 <p class="hero-description">
                     Passionate about building robust systems and learning new technologies. 
-                    Currently mastering low-level programming, web development, and system design at 42 School.
+                    Currently completing my final 42 School project and <strong>actively seeking software development opportunities</strong>.
                     Fluent in <strong>English, Spanish, German, and Italian</strong>.
                 </p>
+                
+                <!-- Tech Stack Icons -->
+                <div class="tech-stack-mini">
+                    <span class="tech-icon" title="C">C</span>
+                    <span class="tech-icon" title="Python">🐍</span>
+                    <span class="tech-icon" title="TypeScript">TS</span>
+                    <span class="tech-icon" title="JavaScript">JS</span>
+                </div>
+                
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="https://github.com/ValGSgit" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+                    <a href="#contact" class="btn btn-primary btn-glow">
+                        <span class="btn-icon">📩</span> Hire Me
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    <a href="https://github.com/ValGSgit" target="_blank" class="btn btn-outline">GitHub Profile</a>
                 </div>
             </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
@@ -63,13 +143,13 @@
                     Five years ago, I made the bold decision to move from <strong>Argentina to Vienna, Austria</strong>, where I've been building my path in the tech world.
                 </p>
                 <p>
-                    Currently, I'm in my final stretch at <strong>42 School (Rank 6)</strong> - an intensive programming curriculum that has 
-                    shaped my problem-solving abilities and technical skills. My journey has taught me that the best solutions often come 
-                    from persistence, creativity, and collaborative thinking.
+                    Currently, I'm in my <strong>final stretch at 42 School (Rank 6)</strong> - completing the last project of the Common Core curriculum. 
+                    This intensive journey has shaped my problem-solving abilities, technical skills, and resilience. 
+                    <strong>I'm now actively seeking opportunities</strong> to bring this expertise to a professional team.
                 </p>
                 <p>
                     From studying at Universidad de Palermo to mastering the rigorous 42 School curriculum, every step has prepared me for 
-                    the challenges ahead. My international experience has given me a unique perspective and the resilience to excel in diverse environments.
+                    the challenges ahead. My international experience has given me a unique perspective and the ability to excel in diverse environments.
                 </p>
                 <div class="about-highlights">
                     <div class="highlight-item">
@@ -93,6 +173,60 @@
         </div>
     </section>
 
+    <!-- Current Focus Section -->
+    <section id="current-focus" class="current-focus">
+        <div class="container">
+            <h2 class="section-title">Current Focus</h2>
+            <div class="focus-content">
+                <div class="focus-card main-focus">
+                    <div class="focus-badge">🎯 Final Project</div>
+                    <h3>ft_transcendence</h3>
+                    <p class="focus-subtitle">The Capstone Project of 42's Common Core</p>
+                    <p class="focus-description">
+                        Currently leading my team through the final and most comprehensive project of the 42 curriculum. 
+                        This full-stack web application demonstrates everything I've learned: from low-level systems 
+                        programming to modern web technologies, team collaboration, and project management.
+                    </p>
+                    <div class="progress-section">
+                        <span class="progress-label">Project Progress</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="progress-percentage">75%</span>
+                    </div>
+                    <div class="focus-tech-stack">
+                        <span class="tech-badge">Web Development</span>
+                        <span class="tech-badge">Team Collaboration</span>
+                        <span class="tech-badge">Full-Stack</span>
+                    </div>
+                </div>
+                
+                <div class="focus-sidebar">
+                    <div class="focus-card">
+                        <div class="focus-badge secondary">📚 Learning</div>
+                        <h4>Expanding Skills</h4>
+                        <ul class="focus-list">
+                            <li>Advanced TypeScript patterns</li>
+                            <li>DevOps & CI/CD pipelines</li>
+                            <li>Cloud infrastructure</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="focus-card">
+                        <div class="focus-badge job-search">🔍 Job Search</div>
+                        <h4>Open to Opportunities</h4>
+                        <ul class="focus-list">
+                            <li>Full-time positions</li>
+                            <li>Vienna or Remote</li>
+                            <li>Available: Upon project completion</li>
+                        </ul>
+                        <a href="#contact" class="focus-cta">Get in Touch →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
@@ -101,13 +235,35 @@
                 <div class="skill-card">
                     <div class="skill-icon">💻</div>
                     <h3>Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="tag">C</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Fortran</span>
-                        <span class="tag">HTML/CSS</span>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">TypeScript</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -118,6 +274,7 @@
                         <span class="tag">Web Applications</span>
                         <span class="tag">RESTful APIs</span>
                         <span class="tag">Responsive Design</span>
+                        <span class="tag">HTML5/CSS3</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -128,6 +285,7 @@
                         <span class="tag">Git</span>
                         <span class="tag">Shell Scripting</span>
                         <span class="tag">System Design</span>
+                        <span class="tag">Docker</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -138,6 +296,33 @@
                         <span class="tag">Teamwork</span>
                         <span class="tag">Peer Learning</span>
                         <span class="tag">Adaptability</span>
+                        <span class="tag">Code Review</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗣️</div>
+                    <h3>Languages</h3>
+                    <div class="language-grid">
+                        <div class="language-item">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                            <span class="lang-level">Fluent</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="lang-flag">🇪🇸</span>
+                            <span class="lang-name">Spanish</span>
+                            <span class="lang-level">Native</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="lang-flag">🇩🇪</span>
+                            <span class="lang-name">German</span>
+                            <span class="lang-level">Fluent</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="lang-flag">🇮🇹</span>
+                            <span class="lang-name">Italian</span>
+                            <span class="lang-level">Fluent</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -331,15 +516,95 @@
         </div>
     </section>
 
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Journey</h2>
+            <div class="achievements-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026</span>
+                        <h3>42 Common Core - Final Project</h3>
+                        <p>Completing ft_transcendence, the capstone project demonstrating full-stack development skills and team leadership.</p>
+                        <span class="achievement-badge">🏆 In Progress</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker completed"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h3>CISPA Hackathon</h3>
+                        <p>Participated as part of 42 Team in the CISPA Hackathon 2025, building the ClusterHikers project under time pressure.</p>
+                        <span class="achievement-badge">🚀 Team Project</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker completed"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024-2025</span>
+                        <h3>42 School - Rank 6 Achievement</h3>
+                        <p>Progressed to Level 5.88, mastering systems programming, algorithms, and collaborative development through peer-to-peer learning.</p>
+                        <span class="achievement-badge">⭐ Level 5.88</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker completed"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021</span>
+                        <h3>Moved to Vienna, Austria</h3>
+                        <p>Made the bold decision to relocate from Argentina to Austria, demonstrating adaptability and courage to pursue new opportunities.</p>
+                        <span class="achievement-badge">🌍 International Move</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker completed"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020</span>
+                        <h3>Universidad de Palermo</h3>
+                        <p>Began computer science studies at Universidad de Palermo, Buenos Aires, building the foundation for a career in technology.</p>
+                        <span class="achievement-badge">📚 Education</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-highlight">
+                <div class="stat-box">
+                    <span class="stat-number" data-target="30">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">Languages Spoken</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-label">42 School Rank</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Let's Connect</h2>
             <div class="contact-content">
-                <p class="contact-text">
-                    I'm always open to discussing new opportunities, interesting projects, 
-                    or ways to collaborate. Feel free to reach out!
-                </p>
+                <div class="contact-intro">
+                    <p class="contact-text">
+                        I'm <strong>actively seeking new opportunities</strong> as I complete my final 42 School project. 
+                        Whether you're looking for a passionate junior developer, want to discuss potential collaborations, 
+                        or just want to chat about tech—I'd love to hear from you!
+                    </p>
+                    <div class="availability-status">
+                        <span class="status-dot active"></span>
+                        <span>Available for full-time roles | Vienna & Remote</span>
+                    </div>
+                </div>
                 <div class="contact-links">
                     <a href="https://github.com/ValGSgit" target="_blank" class="contact-btn">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -347,13 +612,41 @@
                         </svg>
                         GitHub
                     </a>
-                    <a href="mailto:contact@valgs.dev" class="contact-btn">
+                    <a href="https://linkedin.com/in/valentino-gs" target="_blank" class="contact-btn linkedin">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="mailto:contact@valgs.dev" class="contact-btn email">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        Email
+                        Email Me
                     </a>
+                </div>
+                
+                <div class="hiring-cta">
+                    <h3>📋 Quick Info for Recruiters</h3>
+                    <div class="recruiter-info">
+                        <div class="info-row">
+                            <span class="info-label">📍 Location:</span>
+                            <span>Vienna, Austria (Open to Remote)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">⏰ Availability:</span>
+                            <span>Upon project completion (Q1 2026)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">💼 Looking for:</span>
+                            <span>Software Developer / Backend Developer / Full-Stack Developer</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">🗣️ Languages:</span>
+                            <span>English, Spanish, German, Italian (All fluent)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -362,7 +655,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 ValGS. Built with passion and dedication.</p>
+            <div class="footer-content">
+                <p>&copy; 2026 ValGS. Built with passion and dedication.</p>
+                <p class="footer-status">🎯 Currently open to opportunities</p>
+            </div>
         </div>
     </footer>
 
