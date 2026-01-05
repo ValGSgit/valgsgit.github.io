@@ -10,21 +10,68 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
             // Close mobile menu if open
             const navMenu = document.querySelector('.nav-menu');
-            if (navMenu.classList.contains('active')) {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navBackdrop = document.querySelector('.nav-backdrop');
+            
+            if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
+                if (navToggle) {
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+                if (navBackdrop) {
+                    navBackdrop.classList.remove('active');
+                }
+                document.body.style.overflow = '';
             }
         }
     });
 });
 
-// Mobile menu toggle
+// Mobile menu toggle with ARIA management
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
+const navBackdrop = document.querySelector('.nav-backdrop');
 
-if (navToggle) {
+if (navToggle && navMenu) {
+    // Toggle menu
     navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isExpanded);
         navMenu.classList.toggle('active');
+        
+        // Toggle backdrop
+        if (navBackdrop) {
+            navBackdrop.classList.toggle('active');
+        }
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = !isExpanded ? 'hidden' : '';
     });
+    
+    // Close menu when clicking backdrop
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', () => {
+            navToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            navBackdrop.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            navToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+            if (navBackdrop) {
+                navBackdrop.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+            navToggle.focus(); // Return focus to toggle button
+        }
+    });
+} else {
+    console.warn('Navigation toggle or menu not found');
 }
 
 // Scroll Progress Indicator
@@ -99,7 +146,7 @@ class Particle {
 const particles = [];
 // Reduce particle count on mobile devices for better performance
 const isMobile = window.innerWidth < 768;
-const particleCount = isMobile ? 25 : 50;
+const particleCount = isMobile ? 15 : 50;
 
 for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
@@ -223,20 +270,24 @@ document.addEventListener('DOMContentLoaded', () => {
 // Add typing effect to hero subtitle (optional enhancement)
 const heroSubtitle = document.querySelector('.hero-subtitle');
 if (heroSubtitle) {
-    const text = heroSubtitle.textContent;
-    heroSubtitle.textContent = '';
-    let i = 0;
-    
-    const typeWriter = () => {
-        if (i < text.length) {
-            heroSubtitle.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    };
-    
-    // Start typing effect after a brief delay
-    setTimeout(typeWriter, 500);
+    try {
+        const text = heroSubtitle.textContent;
+        heroSubtitle.textContent = '';
+        let i = 0;
+        
+        const typeWriter = () => {
+            if (i < text.length) {
+                heroSubtitle.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        };
+        
+        // Start typing effect after a brief delay
+        setTimeout(typeWriter, 500);
+    } catch (error) {
+        console.error('Error in typing effect:', error);
+    }
 }
 
 // Add console message for developers
