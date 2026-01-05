@@ -1349,7 +1349,6 @@ section {
 
 /* Mobile Menu Backdrop */
 .nav-backdrop {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1359,12 +1358,15 @@ section {
     z-index: 999;
     backdrop-filter: blur(2px);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .nav-backdrop.active {
-    display: block;
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 /* Responsive Design */
