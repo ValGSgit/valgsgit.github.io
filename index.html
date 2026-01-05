@@ -64,15 +64,18 @@
 
     <!-- Particle Background Canvas -->
     <canvas id="particles-canvas"></canvas>
+    
+    <!-- Mobile Menu Backdrop -->
+    <div class="nav-backdrop"></div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">ValGS</div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 ☰
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#current-focus" class="nav-link">Current Focus</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -95,7 +98,7 @@
                 </div>
                 
                 <div class="hero-profile">
-                    <img src="https://raw.githubusercontent.com/ValGSgit/ValGSgit/main/assets/images/profile.jpg" alt="Professional headshot of Valentino, software developer based in Vienna" class="profile-image">
+                    <img src="https://raw.githubusercontent.com/ValGSgit/ValGSgit/main/assets/images/profile.jpg" alt="Professional headshot of Valentino, software developer based in Vienna" class="profile-image" loading="eager" width="180" height="180">
                     <div class="profile-ring"></div>
                 </div>
                 <h1 class="hero-title">Hi, I'm <span class="highlight">Valentino</span></h1>
@@ -338,22 +341,22 @@
                 
                 <!-- 3D Contribution Graph -->
                 <div class="contribution-graph">
-                    <img src="https://raw.githubusercontent.com/ValGSgit/ValGSgit/main/profile-3d-contrib/profile-night-green.svg" alt="Valentino's GitHub contribution activity displayed as an interactive 3D graph showing daily commits and coding patterns over the past year" class="graph-image">
+                    <img src="https://raw.githubusercontent.com/ValGSgit/ValGSgit/main/profile-3d-contrib/profile-night-green.svg" alt="Valentino's GitHub contribution activity displayed as an interactive 3D graph showing daily commits and coding patterns over the past year" class="graph-image" loading="lazy" width="800" height="400">
                 </div>
 
                 <!-- GitHub Stats Cards -->
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <img src="https://github-readme-stats.vercel.app/api?username=ValGSgit&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=1e293b&title_color=6366f1&icon_color=8b5cf6&text_color=cbd5e1" alt="GitHub statistics showing Valentino's total contributions, stars received, commits, pull requests, and issues" class="stat-image">
+                        <img src="https://github-readme-stats.vercel.app/api?username=ValGSgit&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=1e293b&title_color=6366f1&icon_color=8b5cf6&text_color=cbd5e1" alt="GitHub statistics showing Valentino's total contributions, stars received, commits, pull requests, and issues" class="stat-image" loading="lazy" width="495" height="195">
                     </div>
                     <div class="stat-card">
-                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ValGSgit&layout=compact&theme=tokyonight&hide_border=true&bg_color=1e293b&title_color=6366f1&text_color=cbd5e1&langs_count=8" alt="Most used programming languages: C, Python, TypeScript, JavaScript, HTML, CSS, Fortran, and Shell with percentage breakdown" class="stat-image">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ValGSgit&layout=compact&theme=tokyonight&hide_border=true&bg_color=1e293b&title_color=6366f1&text_color=cbd5e1&langs_count=8" alt="Most used programming languages: C, Python, TypeScript, JavaScript, HTML, CSS, Fortran, and Shell with percentage breakdown" class="stat-image" loading="lazy" width="495" height="195">
                     </div>
                 </div>
 
                 <!-- GitHub Streak -->
                 <div class="streak-container">
-                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=ValGSgit&theme=tokyonight&hide_border=true&background=1e293b&ring=6366f1&fire=8b5cf6&currStreakLabel=cbd5e1&sideLabels=cbd5e1&currStreakNum=f1f5f9&sideNums=f1f5f9&dates=94a3b8" alt="GitHub contribution streak statistics showing current streak, longest streak, and total contributions" class="streak-image">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=ValGSgit&theme=tokyonight&hide_border=true&background=1e293b&ring=6366f1&fire=8b5cf6&currStreakLabel=cbd5e1&sideLabels=cbd5e1&currStreakNum=f1f5f9&sideNums=f1f5f9&dates=94a3b8" alt="GitHub contribution streak statistics showing current streak, longest streak, and total contributions" class="streak-image" loading="lazy" width="500" height="200">
                 </div>
 
                 <!-- Additional Info -->
@@ -364,7 +367,7 @@
                     </div>
                     <div class="info-item">
                         <span class="info-label">Profile Views:</span>
-                        <img src="https://komarev.com/ghpvc/?username=ValGSgit&style=flat-square&color=6366f1" alt="Profile view counter badge">
+                        <img src="https://komarev.com/ghpvc/?username=ValGSgit&style=flat-square&color=6366f1" alt="Profile view counter badge" loading="lazy" width="150" height="20">
                     </div>
                 </div>
             </div>
