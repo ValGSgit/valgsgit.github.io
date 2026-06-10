@@ -1,3 +1,6 @@
+// Respect the user's motion preferences
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -139,7 +142,12 @@ function animateParticles() {
     requestAnimationFrame(animateParticles);
 }
 
-animateParticles();
+// Skip the continuous animation loop when reduced motion is preferred (draw one static frame)
+if (prefersReducedMotion) {
+    particles.forEach(particle => particle.draw());
+} else {
+    animateParticles();
+}
 
 // Add animation on scroll for project cards
 const observerOptions = {
@@ -225,13 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
     statNumbers.forEach(num => counterObserver.observe(num));
 });
 
-// Add typing effect to hero subtitle (optional enhancement)
+// Add typing effect to hero subtitle (skipped when reduced motion is preferred)
 const heroSubtitle = document.querySelector('.hero-subtitle');
-if (heroSubtitle) {
+if (heroSubtitle && !prefersReducedMotion) {
     const text = heroSubtitle.textContent;
     heroSubtitle.textContent = '';
     let i = 0;
-    
+
     const typeWriter = () => {
         if (i < text.length) {
             heroSubtitle.textContent += text.charAt(i);
@@ -239,13 +247,45 @@ if (heroSubtitle) {
             setTimeout(typeWriter, 50);
         }
     };
-    
+
     // Start typing effect after a brief delay
     setTimeout(typeWriter, 500);
 }
 
+// Scroll Spy: highlight the nav link of the section currently in view
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+        }
+    });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+sections.forEach(section => spyObserver.observe(section));
+
+// Back to Top button
+const backToTop = document.querySelector('.back-to-top');
+if (backToTop) {
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.pageYOffset > 600);
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
+    });
+}
+
 // Add console message for developers
 console.log('%c👋 Hello, fellow developer!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-console.log('%c🎯 I\'m currently open to opportunities!', 'font-size: 16px; font-weight: bold; color: #10b981;');
+console.log('%c🎓 42 Common Core graduate · 💼 interning at UNIQA · open to full-time from Oct 2026!', 'font-size: 16px; font-weight: bold; color: #10b981;');
 console.log('%cInterested in the code? Check out the repository:', 'font-size: 14px; color: #94a3b8;');
 console.log('%chttps://github.com/ValGSgit/valgsgit.github.io', 'font-size: 14px; color: #06b6d4;');

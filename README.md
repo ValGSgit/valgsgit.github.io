@@ -1,17 +1,18 @@
 # ValGS - Portfolio Website
 
-🚀 **Software Developer** | **Open to Opportunities** | **42 School Final Year**
+🚀 **Software Developer** | **42 Common Core Graduate** | **Software Intern @ UNIQA**
 
-Professional portfolio website showcasing my projects, skills, and experience. Currently completing the final project of 42's Common Core and actively seeking software development opportunities.
+Professional portfolio website showcasing my projects, skills, and experience. Recently completed 42's Common Core and earned a software internship at UNIQA after placing 2nd in the Insurance Track at the Zero One Supercomputing Hackathon.
 
 ## 🎯 Live Site
 Visit the live portfolio at: [https://valgsgit.github.io](https://valgsgit.github.io)
 
 ## ✨ Highlights
 
-- 🟢 **Open to Work** - Actively seeking software development positions
-- 🎓 **Final 42 Project** - Completing ft_transcendence, the capstone project
-- 🌍 **Multilingual** - Fluent in English, Spanish, German, and Italian
+- 🎓 **42 Common Core Graduate** - Completed the full curriculum, now continuing into 42 Advanced
+- 🏆 **Hackathon Podium** - 2nd place, Insurance Track, Zero One Supercomputing Hackathon
+- 💼 **Software Intern @ UNIQA** - July–September 2026, open to full-time from October 2026
+- 🌍 **Multilingual** - Fluent in English and Spanish, working knowledge of German and Italian
 - 📍 **Vienna-based** - Open to remote opportunities
 
 ## 📋 Features
@@ -19,8 +20,8 @@ Visit the live portfolio at: [https://valgsgit.github.io](https://valgsgit.githu
 - Modern, responsive design with smooth animations
 - Interactive particle background
 - Scroll progress indicator
-- "Open to Work" banner highlighting availability
-- Current Focus section showcasing final project progress
+- Status banner highlighting graduation, internship, and availability
+- Current Focus section showcasing the UNIQA internship and 42 Advanced
 - Skill proficiency bars with animations
 - Achievement timeline with milestones
 - Animated statistics counters
@@ -59,13 +60,13 @@ Visit the live portfolio at: [https://valgsgit.github.io](https://valgsgit.githu
 
 ## 💼 Projects Featured
 
-1. **ft_transcendence** - Team web application project (Final 42 project)
-2. **42CC** - Complete C programming curriculum
-3. **webserv** - Custom HTTP server implementation
-4. **ClusterHikers** - CISPA Hackathon 2025 project
+1. **PromptCorn** - Zero One Supercomputing Hackathon submission (2nd place, Insurance Track)
+2. **ft_transcendence** - Full-stack team web application (42 Common Core capstone)
+3. **42CC** - Complete C programming curriculum
+4. **webserv** - Custom HTTP server implementation
 5. **Minishell** - Unix shell implementation
-6. **PISSM** - Personal system tools in Fortran
-7. **ValGSgit** - GitHub profile repository
+6. **Veltara** - Online world game built in TypeScript
+7. **PISSM** - Personal system tools in Fortran
 
 ## 📱 Responsive Design
 
@@ -84,7 +85,7 @@ To view the site locally:
 ## 📧 Contact
 
 - **GitHub**: [ValGSgit](https://github.com/ValGSgit)
-- **LinkedIn**: [valentino-gs](https://linkedin.com/in/valentino-gs)
+- **LinkedIn**: [valentinogs](https://linkedin.com/in/valentinogs)
 - **Email**: contact@valgs.dev
 
 ## 📄 License

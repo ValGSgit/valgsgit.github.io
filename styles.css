@@ -991,8 +991,8 @@ section {
 }
 
 .project-card.featured {
-    border-color: var(--accent-color);
-    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(6, 182, 212, 0.05) 100%);
+    border-color: rgba(245, 158, 11, 0.55);
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(245, 158, 11, 0.06) 100%);
 }
 
 .project-header {
@@ -1514,4 +1514,173 @@ html {
 ::selection {
     background: var(--primary-color);
     color: white;
+}
+
+/* ===== Presentation Enhancements ===== */
+
+/* Hero Achievement Badges */
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.35);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.hero-badge:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.2);
+}
+
+.hero-badge-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.hero-badge-gold {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(234, 179, 8, 0.12));
+    border-color: rgba(245, 158, 11, 0.5);
+    color: #fcd34d;
+}
+
+.hero-badge-gold:hover {
+    border-color: var(--warning-color);
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.25);
+}
+
+/* Active Nav Link (scroll spy) */
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Project Status Badge Variants */
+.project-status.status-award {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(234, 179, 8, 0.15));
+    color: #fcd34d;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.project-status.status-star {
+    background: rgba(234, 179, 8, 0.12);
+    color: #fcd34d;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.project-status.status-done {
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--primary-color);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Featured Project Glow */
+.project-card.featured {
+    box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.15), 0 8px 30px rgba(245, 158, 11, 0.08);
+}
+
+.project-card.featured:hover {
+    border-color: var(--warning-color);
+    box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.3), 0 12px 36px rgba(245, 158, 11, 0.18);
+}
+
+/* Current / In-Progress Timeline Marker */
+.timeline-marker:not(.completed) {
+    background: var(--bg-card);
+    border-color: var(--warning-color);
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
+    animation: marker-pulse 2s ease-in-out infinite;
+}
+
+@keyframes marker-pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.12); }
+    50% { box-shadow: 0 0 0 7px rgba(245, 158, 11, 0.05); }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: var(--transition);
+    z-index: 999;
+    box-shadow: var(--shadow-lg);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--glow-primary);
+}
+
+.back-to-top:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 42px;
+        height: 42px;
+        font-size: 1.25rem;
+    }
+
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
 }
