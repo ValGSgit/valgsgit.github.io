@@ -286,6 +286,6 @@ if (backToTop) {
 
 // Add console message for developers
 console.log('%c👋 Hello, fellow developer!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-console.log('%c🎓 42 Common Core graduate · 💼 interning at UNIQA · open to full-time from Oct 2026!', 'font-size: 16px; font-weight: bold; color: #10b981;');
+console.log('%c🎓 42 Common Core graduate · 📚 42 Advanced · open to full-time from Oct 2026!', 'font-size: 16px; font-weight: bold; color: #10b981;');
 console.log('%cInterested in the code? Check out the repository:', 'font-size: 14px; color: #94a3b8;');
 console.log('%chttps://github.com/ValGSgit/valgsgit.github.io', 'font-size: 14px; color: #06b6d4;');

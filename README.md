@@ -1,8 +1,8 @@
 # ValGS - Portfolio Website
 
-🚀 **Software Developer** | **42 Common Core Graduate** | **Software Intern @ UNIQA**
+🚀 **Software Developer** | **42 Common Core Graduate** | **Continuing into 42 Advanced**
 
-Professional portfolio website showcasing my projects, skills, and experience. Recently completed 42's Common Core and earned a software internship at UNIQA after placing 2nd in the Insurance Track at the Zero One Supercomputing Hackathon.
+Professional portfolio website showcasing my projects, skills, and experience. Recently completed 42's Common Core and placed 2nd in the Insurance Track at the Zero One Supercomputing Hackathon.
 
 ## 🎯 Live Site
 Visit the live portfolio at: [https://valgsgit.github.io](https://valgsgit.github.io)
@@ -11,7 +11,7 @@ Visit the live portfolio at: [https://valgsgit.github.io](https://valgsgit.githu
 
 - 🎓 **42 Common Core Graduate** - Completed the full curriculum, now continuing into 42 Advanced
 - 🏆 **Hackathon Podium** - 2nd place, Insurance Track, Zero One Supercomputing Hackathon
-- 💼 **Software Intern @ UNIQA** - July–September 2026, open to full-time from October 2026
+- 💼 **Open to full-time from October 2026**
 - 🌍 **Multilingual** - Fluent in English and Spanish, working knowledge of German and Italian
 - 📍 **Vienna-based** - Open to remote opportunities
 
@@ -20,8 +20,8 @@ Visit the live portfolio at: [https://valgsgit.github.io](https://valgsgit.githu
 - Modern, responsive design with smooth animations
 - Interactive particle background
 - Scroll progress indicator
-- Status banner highlighting graduation, internship, and availability
-- Current Focus section showcasing the UNIQA internship and 42 Advanced
+- Status banner highlighting graduation and availability
+- Current Focus section showcasing 42 Advanced
 - Skill proficiency bars with animations
 - Achievement timeline with milestones
 - Animated statistics counters
